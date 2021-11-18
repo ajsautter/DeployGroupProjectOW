@@ -25,6 +25,7 @@ SECRET_KEY = 'django-insecure-&1qzn61_22d(-_x&0#-z475ipws-*th%w+^(__47iu%^555xj7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
+
 ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
 
 
@@ -65,6 +66,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'estore.context_processors.categories',
+                'basket.context_processors.basket',
             ],
         },
     },
