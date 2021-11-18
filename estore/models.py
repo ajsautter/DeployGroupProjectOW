@@ -26,6 +26,15 @@ class Category(models.Model):
         return self.name
 
 
+class Contact(models.Model):
+    email = models.EmailField()
+    subject = models.CharField(max_length=255)
+    message = models.TextField()
+
+    def __str__(self):
+        return self.email
+
+
 class Product(models.Model):
     category = models.ForeignKey(Category, related_name='product', on_delete=models.CASCADE)
     created_by = models.ForeignKey(User, related_name='product_creator', on_delete=models.CASCADE)
